@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 interface DotProps {
   id: number;
@@ -11,7 +11,7 @@ interface DotProps {
 }
 
 export const Dot = ({ id, x, y, isNext, isConnected, onClick }: DotProps) => {
-  const dotVariants = {
+  const dotVariants: Variants = {
     hidden: { scale: 0, opacity: 0 },
     visible: {
       scale: 1,

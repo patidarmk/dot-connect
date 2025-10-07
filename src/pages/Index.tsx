@@ -4,7 +4,7 @@ import { useDotConnect } from "@/hooks/useDotConnect";
 import { useGameTimer } from "@/hooks/useGameTimer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { Award, Clock, Gamepad2, Play, Repeat, Trophy } from "lucide-react";
 
 const Index = () => {
@@ -38,11 +38,11 @@ const Index = () => {
   }, [gameState, start, stop, reset, currentLevelSettings.time]);
 
   const renderGameStateOverlay = () => {
-    const backdropVariants = {
+    const backdropVariants: Variants = {
       hidden: { opacity: 0 },
       visible: { opacity: 1 },
     };
-    const modalVariants = {
+    const modalVariants: Variants = {
       hidden: { scale: 0.8, opacity: 0 },
       visible: {
         scale: 1,
